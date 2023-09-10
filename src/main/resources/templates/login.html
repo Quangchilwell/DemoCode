@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dang nhap</title>
+</head>
+<body>
+	
+	<!--  <div th:replace="common/header :: header"></div>-->
+	<h2>Form dang nhap</h2>
+	<p th:if="${error} == error">Tai khoan hoac mat khau khong dung</p>
+	
+	<p th:if="${error} == deny">Tu choi truy cap</p>
+	
+	<form th:action="@{login}" method="post">
+		<input name="username" type="text">
+		<input name="password" type="text">
+		<input type="submit" value="Dang nhap">
+	</form>
+	
+	<!--<div th:replace="common/footer :: footer"></div>-->
+</body>
+</html>

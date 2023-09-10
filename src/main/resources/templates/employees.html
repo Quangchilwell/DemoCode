@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Danh sach nhan vien</h2>
+	
+	<p>Nguoi dung dang nhap: <span th:text=${userDetails}></span> </p>
+	
+	<form th:action="@{logout}" method="post">
+		<input type="submit" value="Dang xuat">
+	</form>
+	
+	<table>
+		<tr>
+			<th>Ma ID</th>
+			<th>Ho ten</th>
+			<th>Tuoi</th>
+			<th>So dien thoai</th>
+			<th>Lua chon</th>
+		</tr>
+		
+		<tr th:each="e: ${employees}">
+			<td th:text=${e.id}></td>
+			<td th:text=${e.name}></td>
+			<td th:text=${e.age}></td>
+			<td>
+				<p th:each="p: ${e.phones}" th:text="${p}"></p>
+			</td>
+			<td>
+				<a th:href="@{/updateEmployee/__${e.id}__}">Sua</a>
+				<a th:href="@{/deleteEmployee/__${e.id}__}">Xoa</a>
+				<a th:href="@{/inforEmployee/__${e.id}__}">Thong tin</a>
+			</td>
+		</tr>
+	</table>
+	
+	<button>
+		<a th:href="@{addEmployee}">Them moi nhan vien</a>
+	</button>
+</body>
+</html>

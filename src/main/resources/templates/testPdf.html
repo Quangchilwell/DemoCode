@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+
+<body>
+
+	<style>
+	
+		.wrapper {
+			display: block;
+			height: 100vh;
+		}
+		.image {
+			width: 350px;
+			margin-bottom: 20px;
+		}
+		
+		.image-wrapper {
+			width: 100%;
+			text-align: center;
+		}
+		
+	
+	</style>
+
+	<div class="wrapper">
+		<h2 style="text-align: center;">Kiem tra</h2>
+		
+		<div class="image-wrapper">
+			<img class="image" alt="" th:src="@{${test}}">
+		</div>
+		
+		<div class="image-wrapper">
+			<img class="image" alt="" th:src="@{${test}}">
+		</div>
+	</div>
+</body>
+</html>

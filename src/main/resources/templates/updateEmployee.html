@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Cap nhat nhan vien</h2>
+	
+	<form th:action="@{/updateEmployee}" th:object="${employee}" method="post">
+		<input th:field="*{id}" type="hidden"/>
+		<input th:field="*{name}" type="text" placeholder="Ho ten"/>
+		<input th:field="*{age}" type="text" placeholder="Tuoi"/>
+		<input type="submit" value="Cap nhat">
+	</form>
+</body>
+</html>

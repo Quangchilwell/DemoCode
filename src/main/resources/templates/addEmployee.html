@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Them moi nhan vien</h2>
+	
+	<form th:action="@{addEmployee}" th:object="${employee}" method="post">
+		<input th:field="*{name}" type="text" placeholder="Ho ten"/>
+		<input th:field="*{age}" type="text" placeholder="Tuoi"/>
+		<input type="submit" value="Them moi">
+	</form>
+</body>
+</html>
